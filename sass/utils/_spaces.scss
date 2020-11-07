@@ -1,0 +1,41 @@
+.blank{
+    height: 200px;
+    width: auto ;
+}
+
+.design-gap{
+    height: 198px;
+    width: Auto;
+    @media (max-width: 768px) {
+            height: 0;
+            width: 0;
+    }
+}
+
+.design-gap-2 {
+    height: 150px;
+    @media screen and (max-width: 768px) {
+        visibility: hidden;
+        height: 0;
+    }
+}
+.design-gap-stay {
+    height: 15rem;
+    background-color: $colour-5;
+}
+.boxgap-20-12 {
+    height: 20px;
+    @media screen and (max-width: 768px) {
+        visibility: hidden;
+        height: 12px;
+    }
+}
+
+.dot {
+    height: 5px;
+    width: 5px;
+    margin: 5px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+}

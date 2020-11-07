@@ -1,0 +1,55 @@
+@keyframes from-left {
+    from {
+        margin-left: -70%;
+    }
+    to {
+        margin-left: 0%;
+    }
+}
+
+@keyframes from-right {
+    from {
+        margin-right: -70%;
+    }
+    to {
+        margin-right: 0%;
+    }
+}
+
+@keyframes from-top {
+    from {
+        margin-top: -50%;
+    }
+    to {
+        margin-top: 0%;
+    }
+}
+
+@keyframes from-bottom {
+    from {
+        margin-bottom: 30%;
+    }
+    to {
+        margin-bottom: 0%;
+    }
+}
+
+.appear-from-top {
+    overflow: hidden;
+    animation: from-top 3s;
+}
+
+.appear-from-bottom {
+    overflow: hidden;
+    animation: from-bottom 3s;
+}
+
+.appear-from-right {
+    overflow: hidden;
+    animation: from-right 3s;
+}
+
+.appear-from-left {
+    overflow: hidden;
+    animation: from-left 3s;
+}

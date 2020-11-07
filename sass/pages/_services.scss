@@ -1,0 +1,56 @@
+.main-body {
+    margin: auto;
+    h2 {
+        text-align: center;
+        padding: 50px 20px 50px 20px;
+        max-width: 900px;
+        min-width: 300px;
+        margin: auto;
+    }
+    
+    .section {
+        margin: auto;
+        padding: 15px;
+        max-width: 1000px;
+        min-width: 200px;
+        padding-bottom: 50px;
+        .main-body-content-about-leraning-goals-and-history {
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px $colour-10;
+            padding: 20px;
+            .leraning-goals-and-history-header {
+                max-width: 450px;
+                margin: auto;
+                h2 {
+                    text-align: center;
+                    font-size: 30px;
+                    font-weight: 900;
+                    border-bottom: dotted #edece8;
+                    padding: 20px;
+                }
+            }
+            .grid-parent-about {
+                padding-top: 20px;
+                display: grid;
+                grid-template-columns: repeat(3, minmax(200px, 1fr));
+                grid-gap: 10px;
+                @media screen and (max-width: 768px) {
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                }
+                .grid-chaild {
+                    border-radius: 10px;
+                    box-shadow: 0 0 10px $colour-10;
+                    padding: 20px;
+                    h2 {
+                        display: inline;
+                        font-size: 30px;
+                        font-weight: 900;
+                        border-bottom: dotted #edece8;
+                        padding: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

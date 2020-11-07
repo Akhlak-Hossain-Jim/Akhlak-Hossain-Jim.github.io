@@ -1,0 +1,114 @@
+.main-body-content-about-page {
+    margin: auto;
+    .main-body-intro-title-sub-title {
+        text-align: center;
+        padding: 50px 20px 50px 20px;
+        max-width: 900px;
+        min-width: 300px;
+        margin: auto;
+        @media screen and (max-width: 768px) {
+            padding: 50px 20px 50px 20px;
+        }
+        @media screen and (max-width: 560px) {
+            padding: 50px 0 50px 0;
+        }
+        .secondary-nav {
+            a {
+                display: inline;
+                border: solid 2px black;
+                border-radius: 15px;
+                color: black;
+                padding: 8px;
+                margin-top: 10px;
+                margin-left: 5px;
+                cursor: pointer;
+                &:active {
+                    color: $colour-9;
+                    background-color: $colour-10;
+                }
+            }
+        }
+    }
+    .main-body-text-box-container {
+        padding: 50px 20px 50px 20px;
+        margin: auto;
+        max-width: 1000px;
+        min-width: 300px;
+        @media screen and (max-width:768) {
+            padding: 20px;
+        }
+        .main-body-text-box {
+            text-align: center;
+            padding: 30px;
+            overflow: hidden;
+            h1 {
+                @media screen and (max-width:768) {
+                    font-size: 30px !important;
+                }
+            }
+            p {
+                margin: auto;
+                text-align: left;
+                padding: 20px;
+                @media screen and (max-width:768) {
+                    margin: inherit !important;
+                    padding-left: 15px !important;
+                    font-size: 12px !important;
+                }
+            }
+            border-radius: 10px !important;
+            box-shadow: 0 0 10px $colour-10;
+            @media screen and (max-width:768) {
+                padding: 15px;
+            }
+        }
+    }
+    .section {
+        margin: auto;
+        padding: 15px;
+        max-width: 1000px;
+        min-width: 200px;
+        padding-bottom: 50px;
+        .main-body-content-about-leraning-goals-and-history {
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px $colour-10;
+            padding: 20px;
+            .leraning-goals-and-history-header {
+                max-width: 450px;
+                margin: auto;
+                h2 {
+                    text-align: center;
+                    font-size: 30px;
+                    font-weight: 900;
+                    border-bottom: dotted #edece8;
+                    padding: 20px;
+                }
+            }
+            .grid-parent-about {
+                padding-top: 20px;
+                display: grid;
+                grid-template-columns: repeat(3, minmax(200px, 1fr));
+                grid-gap: 10px;
+                @media screen and (max-width: 768px) {
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                }
+                .grid-chaild {
+                    border-radius: 10px;
+                    box-shadow: 0 0 10px $colour-10;
+                    padding: 20px;
+                    i {
+                        font-size: 2.5rem;
+                    }
+                    h3 {
+                        font-size: 2.5rem;
+                    }
+                    address {
+                        padding-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+    
+}

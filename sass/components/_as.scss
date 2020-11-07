@@ -1,0 +1,72 @@
+// For Basic templete
+
+.top-nav-bar-white, .top-nav-bar-black, .top-nav-bar-custom {
+    .top-nav-bar-page-links {
+        // font-family: 'Lobster', cursive !important;
+        font-size: 2rem !important;
+        display: inline-flex !important;
+    }
+    
+    .top-nav-bar-page-link {
+        border-radius: 10% !important;
+        padding: 5px !important;
+        margin: 10px !important;
+        font-weight: bolder;
+        cursor: pointer;
+    
+        &:hover {
+            // background-color: $colour-4 !important;
+            color: #0b5750 !important;
+        }
+    }
+    .top-nav-bar-page-link-active {
+            // background-color: $colour-4 !important;
+            color: #0b5750 !important;
+    }
+}
+
+.top-nav-bar-black {
+    .top-nav-bar-toggler {
+        border-color: white;
+        .top-nav-bar-toggler-icon {
+            background-image: url(../../media/Icons/Toggler-white.png);
+        }
+    }
+    .top-nav-bar-page-link {
+        // border: 2px solid beige !important;
+        color: white !important;
+        cursor: pointer;
+    
+        &:hover {
+            // background-color: $colour-4 !important;
+            color: $colour-5 !important;
+        }
+    }
+    .top-nav-bar-page-link-active {
+            // background-color: $colour-4 !important;
+            color: $colour-5 !important;
+    }
+}
+
+.top-nav-bar-white {
+    .top-nav-bar-toggler {
+        border-color: black;
+        .top-nav-bar-toggler-icon {
+            background-image: url(../../media/Icons/Toggler-black-50.png);
+        }
+    }
+    .top-nav-bar-page-link {
+        // border: 2px solid beige !important;
+        color: black !important;
+        cursor: pointer;
+    
+        &:hover {
+            color: $colour-9 !important;
+        }
+    }
+    .top-nav-bar-page-link-active {
+            color: $colour-9 !important;
+    }
+}
+
+// Other pages 
