@@ -64,7 +64,8 @@ function spellCheck() {
         var lPs = Math.ceil(originText.length / ((timer[0] * 60) + timer[1] + (timer[2]/60)));
 
         LPSCnt.innerHTML= lPs + "\xa0" + "Letter/Sec";
-        alert("Congrates test Successfully Done")
+
+        alert("Congrates test Successfully Done");
     }
     else {
         if (textEntered == originTextMatch) {
