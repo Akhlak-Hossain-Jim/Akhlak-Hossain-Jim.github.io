@@ -1,10 +1,16 @@
 /* Layout */
+*{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
 .main {
     display: flex;
     padding: 2em;
-    height: 90vh;
+    height: 100vh;
     justify-content: center;
     align-items: middle;
+    overflow: hidden;
 }
 
 .clockbox,
@@ -15,38 +21,38 @@
 /* Clock styles */
 .circle {
     fill: none;
-    stroke: #000;
+    /* stroke: #000; */
     stroke-width: 9;
     stroke-miterlimit: 10;
 }
 
-.mid-circle {
+/* .mid-circle {
     fill: #000;
-}
+} */
 .hour-marks {
     fill: none;
-    stroke: #000;
+    /* stroke: #000; */
     stroke-width: 9;
     stroke-miterlimit: 10;
 }
 
 .hour-arm {
     fill: none;
-    stroke: #000;
+    /* stroke: #000; */
     stroke-width: 17;
     stroke-miterlimit: 10;
 }
 
 .minute-arm {
     fill: none;
-    stroke: #000;
+    /* stroke: #000; */
     stroke-width: 11;
     stroke-miterlimit: 10;
 }
 
 .second-arm {
     fill: none;
-    stroke: #000;
+    /* stroke: #000; */
     stroke-width: 4;
     stroke-miterlimit: 10;
 }
@@ -63,4 +69,42 @@
 #second {
     transform-origin: 300px 300px;
     transition: transform .5s ease-in-out;
+}
+
+.theme-dark {
+    stroke: #ffffff;
+}
+
+.theme-dark-bg {
+    background-color: #000;
+}
+
+.theme-lite {
+    stroke: #000;
+}
+
+.theme-lite-bg {
+    background-color: #ffffff;
+}
+
+.theme-dark-fill {
+    fill: #000;
+}
+
+.theme-lite-fill{
+    fill: #ffffff;
+}
+
+.thm-change {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #1CB89A;
+    position: fixed; top: 50px; right: 50px;
+    cursor: pointer;
+}
+.chang p, .chang {
+    color: #1CB89A !important;
+    position: fixed; top: 50px; right: 50px;
+    cursor: pointer;
 }
