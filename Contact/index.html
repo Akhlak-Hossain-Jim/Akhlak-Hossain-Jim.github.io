@@ -36,43 +36,66 @@
     <!-- TOP NAVIGATION -->
 
     <nav class="navbar navbar-expand-lg top-nav-bar-white">
-        <a class="navbar-brand" href="../index.html">
-            <div class="top-nav-bar-logo">
-                <img class="top-nav-bar-logo" src="../media/img/AkhlakhossainJim_logo_black.png" alt="top logo">
-            </div>
+        <a class="navbar-brand" href="/">
+          <div class="top-nav-bar-logo">
+            <img class="top-nav-bar-logo" src="/media/img/AkhlakhossainJim_logo_black.png" alt="...">
+          </div>
         </a>
         <button class="navbar-toggler top-nav-bar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon top-nav-bar-toggler-icon"></span>
+          data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon top-nav-bar-toggler-icon"></span>
         </button>
-
+    
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0 top-nav-bar-page-link-container">
-                <li class="nav-item">
-                    <a class="nav-link top-nav-bar-page-link" href="../index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link top-nav-bar-page-link"
-                        href="../About/index.html">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link top-nav-bar-page-link"
-                        href="../Services/index.html">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link top-nav-bar-page-link"
-                        href="../Projects/index.html">Projets</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link top-nav-bar-page-link" href="#">Blog</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link top-nav-bar-page-link  top-nav-bar-page-link-active" href="../Contact/index.html">Contact</a>
-                </li>
-            </ul>
+          <ul class="navbar-nav ml-auto mt-2 mt-lg-0 top-nav-bar-page-link-container">
+            <li class="nav-item">
+              <a class="nav-link top-nav-bar-page-link top-nav-bar-page-link-active" href="./">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link top-nav-bar-page-link" href="/About/">About</a>
+            </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link top-nav-bar-page-link"
+                    href="../Services/">Services</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link top-nav-bar-page-link" href="/Projects/">Projets</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link top-nav-bar-page-link" href="#">Blog</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link top-nav-bar-page-link" href="/">Contact</a>
+            </li>
+          </ul>
         </div>
-    </nav>
+      </nav>
+
+    <main>
+        <div class="form-container">
+            <form id="form">
+                <div class="field">
+                    <label for="subject"></label>
+                    <input type="hidden" name="subject" id="subject" value="Contact through Web">
+                </div>
+                <div class="field">
+                    <label for="name">Name</label><br>
+                    <input type="text" name="name" required id="name">
+                </div>
+                <div class="field">
+                    <label for="email">Email</label><br>
+                    <input type="email" name="email" required id="email">
+                </div>
+                <div class="field">
+                    <label for="message">Message</label><br>
+                    <textarea type="text" name="message" required id="message"></textarea>
+                </div>
+    
+                <input type="submit" id="button" value="Send">
+            </form>
+        </div>
+    </main>
 
     <!-- FOOTER SECTION  -->
 
@@ -116,6 +139,35 @@
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        emailjs.init('user_QCp5pLhEifTk4hSflAOkZ')
+    </script>
+
+    <script>
+        const btn = document.getElementById('button');
+
+        document.getElementById('form')
+            .addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                btn.value = 'Sending...';
+
+                const serviceID = 'default_service';
+                const templateID = 'template_vlqgvc7';
+
+                emailjs.sendForm(serviceID, templateID, this)
+                    .then(() => {
+                        btn.value = 'Send Email';
+                        alert('Sent!');
+                    }, (err) => {
+                        btn.value = 'Send Email';
+                        alert(JSON.stringify(err));
+                    });
+            });
+    </script>
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
