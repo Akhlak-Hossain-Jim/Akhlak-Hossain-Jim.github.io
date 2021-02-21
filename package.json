@@ -1,20 +1,24 @@
 {
-  "name": "parthib_associates",
-  "version": "1.0.0",
-  "description": "parthib associates web ssorce",
+  "name": "akhlak-hossain-jim",
+  "version": "1.12.0",
+  "description": "Akhlak Hossain Jim Github website",
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./Css/style.css --style compressed",
-    "prefix": "postcss ./css/style.css --use autoprefixer -d ./css/prefixed/"
+    "prefix": "postcss ./Css/style.css --use autoprefixer -d ./Css/prefixed/"
   },
   "keywords": [
-    "Ahj"
+    "Ahj",
+    "Akhlak Hossain Jim Github website",
+    "Akhlak Hossain Jim"
   ],
-  "author": "Parthib Associates",
+  "author": "Akhlak Hossain Jim",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akhlak-Hossain-Jim/Akhlak-Hossain-Jim.github.io/issues"
+  },
   "browserslist": "last 4 versions",
   "dependencies": {
-    "sass": "^1.27.0"
-  },
-  "devDependencies": {}
+    "sass": "^1.32.8"
+  }
 }
